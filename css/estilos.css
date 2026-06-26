@@ -1,0 +1,334 @@
+/* Variables de color de la marca Kali Industrial */
+:root {
+    --rojo-kali: #E31E24; /* Color principal rojo de la marca */
+    --negro-industrial: #111111; /* Color oscuro para textos importantes */
+    --amarillo-seguridad: #FFC700; /* Color de acento relacionado a seguridad */
+    --gris-claro: #f4f4f4; /* Fondo suave para secciones */
+}
+
+/* Estilo general de toda la página */
+body {
+    font-family: Arial, sans-serif; /* Tipografía simple y compatible */
+    color: var(--negro-industrial); /* Color principal del texto */
+    padding-top: 95px; /* Evita que el menú fijo tape el contenido */
+}
+
+/* Estilo del banner principal */
+.hero {
+    min-height: 90vh; /* Ocupa casi toda la altura de la pantalla */
+    background: linear-gradient(to right,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.25) 40%,rgba(0,0,0,0.55) 100%),
+                url("../imagenes/fotoPortada.png"); /* Imagen de foto portada del banner */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra todo el espacio */
+    background-position: center center; /* Centra la imagen */
+    display: flex;  /* Mantiene el contenido centrado verticalmente */
+    align-items: center;
+    color: white; /* Texto en color blanco */
+}
+
+.hero::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,0.10); /*agregamos un 10% mas de brillo, porque la imagen es muy oscura*/
+
+}
+
+/* Banner de la modelo corporativa */
+.hero-modelo {
+
+    min-height: 90vh;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,0.05) 0%,
+            rgba(0,0,0,0.10) 35%,
+            rgba(0,0,0,0.25) 100%
+        ),
+        url("../imagenes/chicaUniformes.png");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    /* La modelo queda hacia la derecha */
+    background-position: center right;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+}
+
+/* Banner del martillo  */
+.hero-martillo {
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,0.15) 0%,
+            rgba(0,0,0,0.35) 45%,
+            rgba(0,0,0,0.70) 100%
+        ),
+        url("../imagenes/hombreMartillo.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* Título principal del banner */
+.hero h1 {
+    font-size: 4rem; /* Tamaño grande para impacto visual */
+    font-weight: 900; /* Texto grueso */
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Texto del banner */
+.hero p {
+    font-size: 1.2rem; /* Texto más grande que el normal */
+    max-width: 600px; /* Limita el ancho para mejorar lectura */
+}
+
+/* Títulos de cada sección */
+.titulo-seccion {
+    color: var(--rojo-kali); /* Títulos en rojo Kali */
+    font-weight: 800; /* Títulos gruesos */
+    margin-bottom: 25px; /* Separación inferior */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+/* Texto descriptivo de secciones */
+.texto-seccion {
+    font-size: 1.1rem; /* Aumenta ligeramente el tamaño */
+    line-height: 1.7; /* Mejora la lectura */
+}
+
+/* Tarjetas generales */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imágenes de las tarjetas de líneas de negocio */
+.card-img-top {
+
+    width: 100%;          /* Ocupa todo el ancho de la tarjeta */
+
+    height: 320px;        /* Todas las imágenes tendrán la misma altura */
+
+    object-fit: cover;    /* Recorta la imagen sin deformarla */
+
+    object-position: center; /* Centra el recorte */
+
+}
+
+/* Efecto de zoom suave al pasar el mouse */
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Animación suave de la imagen */
+.card-img-top {
+    transition: transform 0.4s ease;
+}
+
+/* Títulos dentro de tarjetas */
+.card-title {
+    color: var(--rojo-kali); /* Rojo corporativo */
+    font-weight: 700; /* Texto destacado */
+}
+
+/* Tarjetas de productos */
+.producto {
+    border-top: 5px solid var(--rojo-kali); /* Línea roja superior */
+}
+
+/* Botones rojos Bootstrap personalizados */
+.btn-danger {
+    background-color: var(--rojo-kali); /* Fondo rojo Kali */
+    border-color: var(--rojo-kali); /* Borde rojo Kali */
+}
+
+/* Efecto hover de botones rojos */
+.btn-danger:hover {
+    background-color: #b9151b; /* Rojo más oscuro */
+    border-color: #b9151b; /* Borde más oscuro */
+}
+
+/* Footer o pie de página */
+.footer {
+    background-color: var(--negro-industrial); /* Fondo negro industrial */
+    color: white; /* Texto blanco */
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp {
+    position: fixed; /* Lo mantiene fijo en pantalla */
+    right: 20px; /* Separación desde la derecha */
+    bottom: 20px; /* Separación desde abajo */
+    background-color: #25D366; /* Color verde WhatsApp */
+    color: white; /* Texto blanco */
+    padding: 12px 18px; /* Espacio interno */
+    border-radius: 30px; /* Forma redondeada */
+    text-decoration: none; /* Quita subrayado */
+    font-weight: bold; /* Texto grueso */
+}
+
+/* Efecto hover del botón WhatsApp */
+.whatsapp:hover {
+    background-color: #1ebe5d; /* Verde más oscuro */
+    color: white; /* Mantiene texto blanco */
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2rem; /* Reduce el título en pantallas pequeñas */
+    }
+
+    .hero {
+        text-align: center; /* Centra el contenido en celular */
+    }
+
+}
+
+/* Contenedor del texto de marca */
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+/* Texto KALI */
+.marca-nombre {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #E31E24;
+}
+
+/* Texto INDUSTRIAL */
+.marca-subnombre {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #111111;
+}
+
+/* Slogan debajo del nombre */
+.marca-slogan {
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: #111111;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.logo-navbar {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.marca-nombre {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #E31E24;
+}
+
+.marca-subnombre {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #111111;
+}
+
+.marca-slogan {
+    font-size: 0.48rem;
+    font-weight: 700;
+    color: #111111;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 700;
+    color: #111111;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin: 0 8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #E31E24;
+}
+
+.telefono-navbar {
+    font-weight: 700;
+    color: #111111;
+    white-space: nowrap;
+}
+
+.bloque-contacto-navbar .btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px 18px;
+}
+
+/* Color corporativo Kali */
+.texto-rojo{
+    color:#E31E24;
+}
+
+/* Botón secundario del Hero */
+.btn-kali-secundario{
+
+    border:2px solid white;
+
+    color:white;
+
+    background:transparent;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    transition:all .3s ease;
+
+}
+
+/* Efecto al pasar el mouse */
+.btn-kali-secundario:hover{
+
+    background:white;
+
+    color:#111111;
+
+}
+
+/* Imágenes de productos */
+.producto .card-img-top{
+
+    height:220px;      /* Altura uniforme */
+
+    width:100%;
+
+    object-fit:cover;  /* Recorta sin deformar */
+
+}
